@@ -19,7 +19,7 @@ matrix:
       language: bash
 
       script:
-        - choco install dart
+        - choco install dart-sdk
         - choco install emacs
 
 notifications:
