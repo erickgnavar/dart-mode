@@ -6,6 +6,11 @@ dart:
   - stable
   - dev
 
+os:
+  - linux
+  - windows
+  - osx
+
 env:
   # - EVM_EMACS=emacs-24.1-travis
   # - EVM_EMACS=emacs-24.2-travis
