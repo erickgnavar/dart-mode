@@ -1,13 +1,11 @@
 sudo: required
 
-# dart:
-#   - stable
-
 matrix:
   include:
     - os: linux
       language: dart
     - os: windows
+      language: minimal
 
 env:
   - EVM_EMACS=emacs-26.1-travis
