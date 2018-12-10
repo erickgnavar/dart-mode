@@ -1,11 +1,10 @@
-sudo: required
 
 matrix:
   include:
     - os: linux
 
+      sudo: required
       language: dart
-
       env: EVM_EMACS=emacs-26.1-travis
 
       before_install:
@@ -15,10 +14,9 @@ matrix:
 
       script: make
 
-
     - os: windows
 
-      language: minimal
+      language: bash
 
       script:
         - choco install dart
