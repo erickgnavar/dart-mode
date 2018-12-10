@@ -3,21 +3,26 @@ sudo: required
 matrix:
   include:
     - os: linux
+
       language: dart
+
+      env: EVM_EMACS=emacs-26.1-travis
+
+      before_install:
+        - curl -fsSkL https://gist.github.com/rejeep/ebcd57c3af83b049833b/raw > x.sh && source ./x.sh
+        - evm install $EVM_EMACS --use --skip
+        - cask --verbose
+
+      script: make
+
+
     - os: windows
+
       language: minimal
 
-env:
-  - EVM_EMACS=emacs-26.1-travis
-
-before_install:
-
-  - curl -fsSkL https://gist.github.com/rejeep/ebcd57c3af83b049833b/raw > x.sh && source ./x.sh
-  - evm install $EVM_EMACS --use --skip
-  - cask --verbose
-
-script:
-  - make
+      script:
+        - choco install dart
+        - choco install emacs
 
 notifications:
   email: false
