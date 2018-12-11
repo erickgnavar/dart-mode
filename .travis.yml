@@ -28,6 +28,7 @@ matrix:
       before_install:
         - choco install dart-sdk
         - choco install emacs
+        - choco install make
 
       script: make
 
