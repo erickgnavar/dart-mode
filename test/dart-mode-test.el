@@ -2,6 +2,8 @@
 
 (require 'dart-mode)
 
+(toggle-debug-on-error)
+
 (ert-deftest dart-test ()
   (let ((file (make-temp-file "analysis")))
     (dart-add-analysis-root-for-file file)
